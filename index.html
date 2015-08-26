@@ -1,100 +1,123 @@
-  <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
-<head>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-   <link href='http://fonts.googleapis.com/css?family=Great+Vibes' rel='stylesheet' type='text/css'>
-  <link href='http://fonts.googleapis.com/css?family=Trochut:400,400italic' rel='stylesheet' type='text/css'>
-  <link href='http://fonts.googleapis.com/css?family=Slabo+27px' rel='stylesheet' type='text/css'>
-  <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true"></script>
+  <head>
+    <!-- Required to properly zoom the viewport on mobile. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>The Toy Story</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true"></script>
   <script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
-  <link rel="stylesheet" href="cards.css">
-</head>
-<body>
-  
-<!---Navigational header-->
-  <div id="main-navbar">
-    <a class="logo" href="index.html">The Toy Story.....</a>
-    <ul>
-      <div><li><a href="#">Sign In</a></li></div>
-      <div><li><a href="Share.html">Share a toy</a></li></div>
-    </ul>
-  </div>
 
+    <!-- Application CSS and fonts -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 
-<!---Search box-->
+    <!--<link rel="stylesheet" href="assets/main.css">-->
+    <link rel="stylesheet" type="text/css" media="screen and (min-device-width: 320px) and (max-device-width: 500px)" href="assets/mobile.css" />
+<link rel="stylesheet" type="text/css" media="screen and (min-device-width: 501px)" href="assets/main.css" />
+  </head>
 
-<div id="search-bar" class="center">
-    <div class="row">
-      <div class="col-xs-12">
-    <form>
+  <body>
+    <!-- Navigational header -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">The Toy Story</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="index.html">Home</a></li>
+            <li><a href="Share.html">Share a Toy</a></li>
+            <li><a href="#contact">Sign In</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <!--  poster image -->
+    <div id="search">
+      <div class="row">
+        <div class="col-xs-12">
+      <form>
       <textarea id="input1" type="text" placeholder="Title" required></textarea>
       <textarea id = "input2" type="text" placeholder="Location..." required></textarea>
-      <input id="target" type="button" value="Search">
+      <button id="target" class="btn btn-default" type="button">Search</button>
+      <!--<input id="target" type="button" value="Search">-->
 </form>
+</div>
+</div>
 
-</div>
-</div>
-<div class="narrative">
-  <div class="row">
-    <div class="col-xs-12">
-      <p>The Toy Story is a free and simple way to share your children's used toys.Just upload photos and a short description of the toys with your location and become a part of us. And remember don't just share your toys, share your toy stories too because each childhood is an untold fairy tale waiting to be read over and over again.</p>
     </div>
-  </div>
-</div>
-</div>
 
-     
-  <div id ="cards-container">
-  </div>
-  
-  <div id="mask"></div>
-  
-      <div id ="lightbox-container">
+    
+<div class="container">
+      <!-- Narrative row -->
+      <div class="row spacer narrative">
+        <div class="col-xs-12">The Toy Story is a free and simple way to share your children's used toys.Just upload photos and a short description of the toys with your location and become a part of us. And remember don't just share your toys, share your toy stories too because each childhood is an untold fairy tale waiting to be read over and over again.</div>
+      </div>
+
+      
+      <div class="row spacer">
+        <div id ="cards-container">
         </div>
-        
-</div>
-
-<!---Footer-->
-
-<div id="footer">
-<img title="Facebook" alt="Facebook" src="https://socialmediawidgets.files.wordpress.com/2014/03/facebook1.png" width="100px" height="100px" />
+  
+       <div id="mask"></div>
+  
+        <div id ="lightbox-container">
+         </div>
+       </div>
+     </div>
+     <div class="row spacer">
+     <div class="mastfoot">
+            <div class="inner">
+              <img title="Facebook" alt="Facebook" src="https://socialmediawidgets.files.wordpress.com/2014/03/facebook1.png" width="30" height="30" />
 <a href="https://www.linkedin.com/pub/kabita-chatterjee/b/82a/74b">
-<img title="LinkedIn" alt="LinkedIn" src="https://socialmediawidgets.files.wordpress.com/2014/03/linkedin1.png" width="100" height="100" />
+<img title="LinkedIn" alt="LinkedIn" src="https://socialmediawidgets.files.wordpress.com/2014/03/linkedin1.png" width="30" height="30" />
 </a>
 <a href="mailto:chatterjeekavita01@gmail.com">
-<img title="Email" alt="Email" src="https://socialmediawidgets.files.wordpress.com/2014/03/email.png" width="100" height="100" />
+<img title="Email" alt="Email" src="https://socialmediawidgets.files.wordpress.com/2014/03/email.png" width="30" height="30" />
 </a>
-  </div>
+            </div>
+          </div>
+        </div>
 
-  
-
-<!--- Cards Template-->
+        
+      
+        <!--- Cards Template-->
   <script id="my-template" type ="x-tmpl-mustache">
   
   <div class="card" style="background-image: url({{image}})">
  <div class="title">{{title}}</div>
-    <div class="address">
-    <img src="assets/address.png">
+ <i class="icon-camera-retro"></i>
+    <div class="address"><i class="fa fa-home"></i>
     {{address}}</div>
     <div class="profile" style="background-image: url({{profile}})"></div>
   </div>
   </script>
 
-  <!-- Lightbox template. -->
-  <script id="lightbox-template" type="x-tmpl-mustache">
+
+    <script id="lightbox-template" type="x-tmpl-mustache">
     <div class="lightbox center">
       <div class="poster" style="background-image: url({{ image }})"></div>
       <div class="name">{{ title }}</div>
-      <div id="map-canvas"><a href="{{ map }}" target="_blank">{{ address }}</a></div>
+      <div id="map-canvas"><i class="fa fa-map-marker"></i><a href="{{ map }}" target="_blank">{{ address }}</a></div>
       <div class="description">{{ description }}</div>
+    </script>
     
-
-    
-  </script>
-
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  
   <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.1.2/mustache.min.js"></script>
   <script src="drill.js"></script>
-  
-</body>
+        
+  </body>
 </html>

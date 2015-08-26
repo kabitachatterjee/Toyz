@@ -6,9 +6,9 @@ function fetchData() {
     
     for (var i =0; i< toys.length; i++) {
       var currentToy = toys[i];
-      //console.log(currentToy);
+      
     var stampedTemplate = Mustache.render(rawTemplate,currentToy);
-    //console.log(stampedTemplate);
+    
     $('#cards-container').append(stampedTemplate);
 
     };
@@ -53,26 +53,31 @@ fetchData();
 
 function search(){
 $( "#target" ).click(function(e) {
-  //console.log(toysDictionary);
+  
   var mytitle = $("#input1").val();
-  //console.log(mytitle);
+  
+  var mytitleL = mytitle.toLowerCase();
+  
   var myloc = $("#input2").val();
-  //console.log(myloc);
+  
+  var mylocL = myloc.toLowerCase();
+  
   $("#cards-container").html('');
   for (artist in toysDictionary){
-    //console.log(toysDictionary.title);
     var currentTitle = toysDictionary[artist].title;
-    //console.log(currentTitle);
+    var currentTitleL = currentTitle.toLowerCase();
+    
     var currentLoc = toysDictionary[artist].address;
-    //console.log(currentLoc);
-    if (currentTitle.includes(mytitle) && (currentLoc.includes(myloc))){
-      //console.log(mytitle);
+    var currentLocL = currentLoc.toLowerCase();
+    
+    if ((currentTitle.includes(mytitle) || currentTitleL.includes(mytitleL)) && (currentLoc.includes(myloc) || currentLocL.includes(mylocL))){
+      
       var currentToy = toysDictionary[artist];
-      //console.log(currentToy);
+      
       var rawTemplate = $('#my-template').html();
-     // console.log(rawTemplate);
+     
       var stampedTemplate = Mustache.render(rawTemplate, currentToy);
-     // console.log(stampedTemplate);
+     
       $('#cards-container').append(stampedTemplate);
     }
     
@@ -116,25 +121,7 @@ $('#input6').val('');
 
 share();
 
-/*function update(){
-  var toysRef = new Firebase('https://torrid-heat-1073.firebaseio.com/toys/');
-// Modify the 'first' and 'last' children, but leave other data at fredNameRef unchanged
-toysRef.update({ title: 'abc', description: 'xyz' });
-}*/
 
-
-/*function summary(){
-var toysref = new Firebase('https://torrid-heat-1073.firebaseio.com/toys');
-// Attach an asynchronous callback to read the data at our posts reference
-toysref.on("value", function(snapshot) {
-  console.log(snapshot.val());
-  console.log(snapshot.val().length);
-  var count = ((snapshot.val().length) - 1);
-  console.log(count);
-}, function (errorObject) {
-  console.log("The read failed: " + errorObject.code);
-});
-}*/
 
 
 

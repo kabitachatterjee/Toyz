@@ -1,42 +1,68 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-  
-  <link href='http://fonts.googleapis.com/css?family=Great+Vibes' rel='stylesheet' type='text/css'>
-  <link href='http://fonts.googleapis.com/css?family=Trochut:400,400italic' rel='stylesheet' type='text/css'>
+  <head>
+    <!-- Required to properly zoom the viewport on mobile. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>The Toy Story</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true"></script>
   <script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
-  <link rel="stylesheet" href="cards.css">
-</head>
+
+    <!-- Application CSS and fonts -->
+    <link rel="stylesheet" type="text/css" media="screen and (min-device-width: 320px) and (max-device-width: 500px)" href="assets/mobile.css" />
+<link rel="stylesheet" type="text/css" media="screen and (min-device-width: 501px)" href="assets/main.css" />
+  </head>
 <body>
-  <div id="main-navbar">
-    <a class="logo" href="index.html">The Toy Story.....</a>
-    <ul>
-      <div><li><a href="#">Sign In</a></li></div>
-      <div><li><a href="Share.html">Share a toy</a></li></div>
-    </ul>
-  </div>
+  <!-- Navigational header -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">The Toy Story</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="index.html">Home</a></li>
+            <li class="active"><a href="Share.html">Share a Toy</a></li>
+            <li><a href="#contact">Sign In</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
 <div id="share-bar" class="center">
   <div class="row">
     <div class="col-xs-12">
     <form>
-      <label>Title</label>
+      <div class="label">Title</div>
       <textarea id="input3" type="text" placeholder="Title" required></textarea></br>
-      <label>Description<br/>
-        (a short description of the toy)</label>
+      <div class="label">Description<br/>
+        (a short description of the toy)</div>
       <textarea id="input4" type="text" cols="70" rows="50" value="" required></textarea><br/>
-      <label>Address</label>
+      <div class="label">Address</div>
       <textarea id ="input5" type="text" placeholder="Address" required></textarea><br/>
-      <label>Image URL</label>
+      <div class="label">Image URL</div>
       <textarea id ="input6" type="text" placeholder="Image URL" required></textarea><br/>
-      <input id="target1" type="button" value="Upload">
+      <button id="target1" class="btn btn-default" type="button">Upload</button>
+      <!--<input id="target1" type="button" value="Upload">-->
 </form>
 </div>
 </div>
 </div>
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  
   <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.1.2/mustache.min.js"></script>
+  
   <script src="drill.js"></script>
 
 
