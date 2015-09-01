@@ -48,17 +48,27 @@
     <!--  poster image -->
     <div id="search">
       <div class="row">
-        <div class="col-xs-12">
-      <form>
+        <div class="col-xs-4">
       <textarea id="input1" type="text" placeholder="Title" required></textarea>
-      <textarea id = "input2" type="text" placeholder="Location..." required></textarea>
-      <button id="target" class="btn btn-default" type="button">Search</button>
+    </div>
+    <div class="col-xs-4">
+      <div class="dropdown">
+  <select id="input2">
+    <option value=" ">Location...</option>
+  <option value="San Francisco">San Francisco</option>
+  <option value="Dublin">Dublin</option>
+  <option value="Foster City">Foster City</option>
+  <option value="Mountain View">Mountain View</option>
+</select>
+</div>
+</div>
+<div class="col-xs-4">
+<button id="target" class="btn btn-default" type="button">Search</button>
+</div>
       <!--<input id="target" type="button" value="Search">-->
-</form>
 </div>
 </div>
 
-    </div>
 
     
 <div class="container">
